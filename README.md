@@ -1,12 +1,10 @@
 
-# Advanced Building Blocks - Bubble Sort
+# Project 2 - Tic Tac Toe
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## What is Bubble Sort ?
->Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, 
-is named for the way smaller or larger elements "bubble" to the top of the list.
-[Read me on Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort) 
+## How Tic Tac Toe is played?
+
 
 ![screenshot](./Assets/sort.gif)
 
@@ -33,6 +31,14 @@ To get a local copy up and running follow these simple example steps.
 ## Authors
 
 👤 **Tanzila**
+
+![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=tanzila-abedin&count_private=true&theme=dark&show_icons=true)
+
+- GitHub: [@githubhandle](https://github.com/tanzila-abedin)
+- Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tanzila-abedin-331440b2/)
+
+👤 **Stephanie**
 
 ![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=tanzila-abedin&count_private=true&theme=dark&show_icons=true)
 
