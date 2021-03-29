@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Tanzila**
 
-![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=tanzila-abedin&count_private=true&theme=dark&show_icons=true)
+![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stephanie041996&count_private=true&theme=dark&show_icons=true)
 
 - GitHub: [@githubhandle](https://github.com/tanzila-abedin)
 - Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
