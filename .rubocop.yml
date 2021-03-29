@@ -28,10 +28,14 @@ Style/EachForSimpleLoop:
   Enabled: false
 Style/AndOr:
   Enabled: false
+Style/For:
+  Enabled: false
 Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/CaseEquality:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
