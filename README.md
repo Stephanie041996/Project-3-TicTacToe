@@ -1,12 +1,10 @@
 
-# Project 2 - Tic Tac Toe
+# Project 3 - Tic Tac Toe
 
 
 
 ## How Tic Tac Toe is played?
 
-
-![screenshot](./Assets/sort.gif)
 
 
 ## Built With
