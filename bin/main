@@ -33,5 +33,7 @@ puts 'its player_2 turn'
 puts 'Please select available cell from the board'
 move = gets.chomp
 
+puts 'Game Over'
+
 
 
