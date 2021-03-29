@@ -1,7 +1,7 @@
 
 # Project 2 - Tic Tac Toe
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
+
 
 ## How Tic Tac Toe is played?
 
