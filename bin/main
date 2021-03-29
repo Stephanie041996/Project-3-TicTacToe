@@ -18,3 +18,8 @@ puts '| 7 | 8 | 9 |'
 puts '+---+---+---+'
 
 puts 'its player_1 turn'
+puts 'Please select available cell from the board'
+move = gets.chomp
+
+
+
