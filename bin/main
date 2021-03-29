@@ -1,3 +1,20 @@
 #!/usr/bin/env ruby
+puts 'Welcome to Rubys Tic-Tac-Toe'
+puts 'Enter player 1 name :'
+player_1 = gets.chomp
+puts 'Enter player 2 name :'
+player_2 = gets.chomp
 
-puts 'Hello!'
+puts 'player 1 will be x and player 2 will o'
+
+puts 'Lets play'
+
+puts '+---+---+---+'
+puts '| 1 | 2 | 3 |'
+puts '+---+---+---+'
+puts '| 4 | 5 | 6 |'
+puts '+---+---+---+'
+puts '| 7 | 8 | 9 |'
+puts '+---+---+---+'
+
+puts 'its player_1 turn'
