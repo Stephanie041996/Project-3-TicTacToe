@@ -1,4 +1,37 @@
 #!/usr/bin/env ruby
+class Display
+  def initialize
+    @cell = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  end
+
+  def display_board(cell)
+    puts "      +---+---+---+
+      | #{cell[0]} | #{cell[1]} | #{cell[2]} |
+      +---+---+---+
+      | #{cell[3]} | #{cell[4]} | #{cell[5]} |
+      +---+---+---+
+      | #{cell[6]} | #{cell[7]} | #{cell[8]} |
+      +---+---+---+"
+  end
+end
+
+    "Let's play a simple Tic-Tac-Toe game in the console! \n\n"
+ 
+    "What is the name of player ##{number}?"
+
+    'What 1 letter (or special character) would you like to be your game marker?'
+
+    "It can not be '#{duplicate}'"
+
+    "\e[31mSorry, that is an invalid answer. Please, try again.\e[0m"
+
+    "#{name}, please enter a number (1-9) that is available to place an '#{symbol}'"
+
+    "GAME OVER! #{player} is the winner!"
+
+    "It's a draw"
+
+
 puts 'Welcome to Rubys Tic-Tac-Toe'
 puts 'Enter player 1 name :'
 player_1 = gets.chomp
