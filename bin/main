@@ -1,72 +1,59 @@
 #!/usr/bin/env ruby
-class Display
-  def initialize
-    @cell = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  end
 
-  def display_board(cell)
-    puts "      +---+---+---+
-      | #{cell[0]} | #{cell[1]} | #{cell[2]} |
-      +---+---+---+
-      | #{cell[3]} | #{cell[4]} | #{cell[5]} |
-      +---+---+---+
-      | #{cell[6]} | #{cell[7]} | #{cell[8]} |
-      +---+---+---+"
-  end
+def display_board
+  puts '+---+---+---+'
+  puts '| 1 | 2 | 3 |'
+  puts '+---+---+---+'
+  puts '| 4 | 5 | 6 |'
+  puts '+---+---+---+'
+  puts '| 7 | 8 | 9 |'
+  puts '+---+---+---+'
 end
 
-    "Let's play a simple Tic-Tac-Toe game in the console! \n\n"
- 
-    "What is the name of player ##{number}?"
-
-    'What 1 letter (or special character) would you like to be your game marker?'
-
-    "It can not be '#{duplicate}'"
-
-    "\e[31mSorry, that is an invalid answer. Please, try again.\e[0m"
-
-    "#{name}, please enter a number (1-9) that is available to place an '#{symbol}'"
-
-    "GAME OVER! #{player} is the winner!"
-
-    "It's a draw"
-
-
+puts display_board
 puts 'Welcome to Rubys Tic-Tac-Toe'
 puts 'Enter player 1 name :'
 player_1 = gets.chomp
 puts 'Enter player 2 name :'
 player_2 = gets.chomp
 
-puts 'player 1 will be x and player 2 will o'
+def players
+  turn = 0
+  move = []
+  while turn < 8
 
-puts 'Lets play'
+    if turn.even?
+      puts display_board
+      puts 'its player 1 turn'
+      move << gets.chomp
 
-puts '+---+---+---+'
-puts '| 1 | 2 | 3 |'
-puts '+---+---+---+'
-puts '| 4 | 5 | 6 |'
-puts '+---+---+---+'
-puts '| 7 | 8 | 9 |'
-puts '+---+---+---+'
+    else
+      puts display_board
+      puts 'its player 2 turn'
+      move << gets.chomp
 
-puts 'its player_1 turn'
-puts 'Please select available cell from the board'
-move = gets.chomp
+    end
+    turn += 1
+  end
+end
+puts players
 
-puts '+---+---+---+'
-puts '| 1 | 2 | 3 |'
-puts '+---+---+---+'
-puts '| 4 | 5 | 6 |'
-puts '+---+---+---+'
-puts '| 7 | 8 | 9 |'
-puts '+---+---+---+'
+# def validate
+#      move = []
+#      input = gets.chomp
 
-puts 'its player_2 turn'
-puts 'Please select available cell from the board'
-move = gets.chomp
-
-puts 'Game Over'
-
-
-
+#         if move.include?(input)
+#             puts 'Its already taken please choose another number'
+#            else
+#           move << gets.chomp
+#         end
+# end
+# def validate_position(position, board)
+#     loop do
+#       break if (1..9).include?(position) && !board[position - 1].is_a?(String)
+#       print 'Please enter valid number from 1 to 9: ' unless (1..9).include?(position)
+#       print "It's already taken. Please choose another position: " if board[position - 1].is_a?(String)
+#       position = gets.chomp.to_i
+#     end
+#     position
+#   end
