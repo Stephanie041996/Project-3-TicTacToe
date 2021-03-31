@@ -18,17 +18,18 @@ puts 'Enter player 2 name :'
 player_2 = gets.chomp
 
 def players
+  position = validate
   turn = 0
   move = []
   while turn < 8
 
     if turn.even?
-      puts display_board
+      puts display_board if display_board[i] == position
       puts 'its player 1 turn'
       move << gets.chomp
 
     else
-      puts display_board
+      puts display_board if display_board[i] == position
       puts 'its player 2 turn'
       move << gets.chomp
 
@@ -38,16 +39,17 @@ def players
 end
 puts players
 
-# def validate
-#      move = []
-#      input = gets.chomp
+def validate
+     move = []
+     input = gets.chomp
 
-#         if move.include?(input)
-#             puts 'Its already taken please choose another number'
-#            else
-#           move << gets.chomp
-#         end
-# end
+      if move.include?(input)
+          puts 'Its already taken please choose another number'
+        else
+          move << gets.chomp
+        end
+end
+
 # def validate_position(position, board)
 #     loop do
 #       break if (1..9).include?(position) && !board[position - 1].is_a?(String)
