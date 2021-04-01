@@ -1,45 +1,55 @@
 #!/usr/bin/env ruby
+class UserInterface
+  def initialize
+    @move = [0]
+  end
 
-def display_board
-  puts "+---+---+---+"
-  puts "| 1 | 2 | 3 |"
-  puts "+---+---+---+"
-  puts "| 4 | 5 | 6 |"
-  puts "+---+---+---+"
-  puts "| 7 | 8 | 9 |"
-  puts "+---+---+---+"
-end
+  def to_s
+    puts '+---+---+---+'
+    puts '| 1 | 2 | 3 |'
+    puts '+---+---+---+'
+    puts '| 4 | 5 | 6 |'
+    puts '+---+---+---+'
+    puts '| 7 | 8 | 9 |'
+    puts '+---+---+---+'
+  end
 
-puts display_board
-puts 'Welcome to Rubys Tic-Tac-Toe'
-puts 'Enter player 1 name :'
-player_1 = gets.chomp
-puts 'Enter player 2 name :'
-player_2 = gets.chomp
+  puts to_s
+  puts 'Welcome to Rubys Tic-Tac-Toe'
+  puts 'Enter player 1 name :'
+  gets.chomp
+  puts 'Enter player 2 name :'
+  gets.chomp
 
-
-
-def players
-  turn = 0
-  move = []
-  while turn < 8
-
-    if turn.even?
-      puts display_board
-      puts 'its player 1 turn'
-      move << gets.chomp
-      puts "Now, your move is displayed on the board"
-
-    else
-      puts display_board
-      puts 'its player 2 turn'
-      move << gets.chomp
-      puts "Now, your move is displayed on the board"
-
+  def players
+    turn = 0
+    while turn < 8
+      if turn.even?
+        puts one_output
+      else
+        puts two_outout
+      end
+      turn += 1
     end
-    turn += 1
+  end
+
+  def one_output
+    puts to_s
+    puts "its player 1's turn"
+    @move << gets.chomp
+    puts 'Now, your move is displayed on the board'
+  end
+
+  def two_outout
+    puts to_s
+    puts "its player 2's turn"
+    @move << gets.chomp
+    puts 'Now, your move is displayed on the board'
   end
 end
-puts players
 
-puts "Game over Player 1 wins "
+result = UserInterface.new
+
+puts result.players
+
+puts 'Game over Player 1 wins '
