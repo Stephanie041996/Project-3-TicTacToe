@@ -37,6 +37,7 @@ def players
   end
 end
 puts players
+puts 'game over you win'
 
 # def validate
 #      move = []
