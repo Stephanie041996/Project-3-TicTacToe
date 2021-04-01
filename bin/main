@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 
 def display_board
-  puts '+---+---+---+'
-  puts '| 1 | 2 | 3 |'
-  puts '+---+---+---+'
-  puts '| 4 | 5 | 6 |'
-  puts '+---+---+---+'
-  puts '| 7 | 8 | 9 |'
-  puts '+---+---+---+'
+  puts "+---+---+---+"
+  puts "| 1 | 2 | 3 |"
+  puts "+---+---+---+"
+  puts "| 4 | 5 | 6 |"
+  puts "+---+---+---+"
+  puts "| 7 | 8 | 9 |"
+  puts "+---+---+---+"
 end
 
 puts display_board
@@ -17,42 +17,29 @@ player_1 = gets.chomp
 puts 'Enter player 2 name :'
 player_2 = gets.chomp
 
-def validate
-  move = []
-  input = 0
-  3.times do
-    puts 'enter number'
-    input = gets.chomp
-    if move.include?(input)
-      puts 'already there'
-    else
-      move << input
-    end
-  end
-  move
-end
+
 
 def players
-  position = validate
   turn = 0
+  move = []
   while turn < 8
-    if turn.even? && position
-      puts "#{player_1} turn"
-    elsif turn == position
-      puts "#{player_2} turn"
+
+    if turn.even?
+      puts display_board
+      puts 'its player 1 turn'
+      move << gets.chomp
+      puts "Now, your move is displayed on the board"
+
+    else
+      puts display_board
+      puts 'its player 2 turn'
+      move << gets.chomp
+      puts "Now, your move is displayed on the board"
+
     end
     turn += 1
   end
 end
 puts players
-puts 'game over you win'
 
-# def validate_position(position, board)
-#     loop do
-#       break if (1..9).include?(position) && !board[position - 1].is_a?(String)
-#       print 'Please enter valid number from 1 to 9: ' unless (1..9).include?(position)
-#       print "It's already taken. Please choose another position: " if board[position - 1].is_a?(String)
-#       position = gets.chomp.to_i
-#     end
-#     position
-#   end
+puts "Game over Player 1 wins "
