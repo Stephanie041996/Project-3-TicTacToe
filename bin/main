@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 class UserInterface
   def initialize
-    @move = [0]
+    @arr = []
+    @player_one = 'tom'
+    @player_two = 'kim'
   end
 
   def to_s
@@ -21,13 +23,24 @@ class UserInterface
   puts 'Enter player 2 name :'
   gets.chomp
 
+  def num_check(move)
+    if (1..9).include? move
+      true
+    else
+      p 'Enter a Valid number'
+      false
+    end
+  end
+
   def players
     turn = 0
     while turn < 8
       if turn.even?
         puts one_output
+
       else
         puts two_outout
+
       end
       turn += 1
     end
@@ -35,16 +48,33 @@ class UserInterface
 
   def one_output
     puts to_s
-    puts "its player 1's turn"
-    @move << gets.chomp
-    puts 'Now, your move is displayed on the board'
+
+    puts "its #{@player_one} turn"
+
+    select1 = false
+    while select1 == false
+      input = gets.chomp.to_i
+      @arr << input if num_check(input)
+
+      select1 = num_check(input)
+    end
+    puts @arr
   end
 
   def two_outout
     puts to_s
-    puts "its player 2's turn"
-    @move << gets.chomp
-    puts 'Now, your move is displayed on the board'
+
+    puts "its #{@player_two} turn"
+
+    select1 = false
+    while select1 == false
+      input = gets.chomp.to_i
+      @arr << input if num_check(input)
+
+      select1 = num_check(input)
+    end
+    puts @arr
+    puts
   end
 end
 
