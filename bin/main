@@ -29,7 +29,7 @@ class UserInterface
 
   def players
     turn = 0
-    while turn <= 9
+    while turn < 9
       if turn.even?
         puts one_output
 
