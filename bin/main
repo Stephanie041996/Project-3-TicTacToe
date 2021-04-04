@@ -8,8 +8,8 @@ class UserInterface
   def initialize
     @board = Board.new
     @arr = []
-    @player_one = 'tom'
-    @player_two = 'kim'
+    @player_one = ''
+    @player_two = ''
     @cell = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
 
@@ -29,7 +29,7 @@ class UserInterface
 
   def players
     turn = 0
-    while turn < 8
+    while turn <= 9
       if turn.even?
         puts one_output
 
@@ -74,12 +74,19 @@ game_on = true
 while game_on == true
   puts 'Welcome to Rubys Tic-Tac-Toe'
   puts 'Enter player 1 name :'
-  result.player_one = (gets.chomp)
-  result.player_one
+  while result.player_one.length.zero? == true
+    result.player_one = (gets.chomp)
+    puts 'dont leave empty'
+    result.player_one
+  end
 
   puts 'Enter player 2 name :'
-  result.player_two = (gets.chomp)
-  result.player_two
+  while result.player_two.length.zero? == true
+    result.player_two = (gets.chomp)
+    puts 'dont leave empty'
+    result.player_two
+  end
+
   puts 'lets play! Enter a number to match the position you want to play on the board'
   puts result.players
 
