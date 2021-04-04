@@ -51,7 +51,7 @@ class UserInterface
 
       select1 = num_check(input)
     end
-    puts @arr
+    print @arr
   end
 
   def two_outout
@@ -65,22 +65,32 @@ class UserInterface
 
       select1 = num_check(input)
     end
-    puts @arr
-    puts
+    print @arr
   end
 end
 
 result = UserInterface.new
+game_on = true
+while game_on == true
+  puts 'Welcome to Rubys Tic-Tac-Toe'
+  puts 'Enter player 1 name :'
+  result.player_one = (gets.chomp)
+  result.player_one
 
-puts 'Welcome to Rubys Tic-Tac-Toe'
-puts 'Enter player 1 name :'
-result.player_one = (gets.chomp)
-result.player_one
+  puts 'Enter player 2 name :'
+  result.player_two = (gets.chomp)
+  result.player_two
+  puts 'lets play! Enter a number to match the position you want to play on the board'
+  puts result.players
 
-puts 'Enter player 2 name :'
-result.player_two = (gets.chomp)
-result.player_two
-puts 'lets play! Enter a number to match the position you want to play on the board'
-puts result.players
+  puts 'Game over Player 1 wins '
 
-puts 'Game over Player 1 wins '
+  puts 'play another game ? yes or no'
+  response = gets.chomp.to_s
+
+  if response.include?('no')
+    game_on = false
+  elsif response.include?('yes')
+    true
+  end
+end
