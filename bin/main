@@ -1,40 +1,29 @@
 #!/usr/bin/env ruby
+
+require_relative '../lib/board'
+
 class UserInterface
+  attr_accessor :player_one, :player_two
+
   def initialize
+    @board = Board.new
     @arr = []
     @player_one = 'tom'
     @player_two = 'kim'
+    @cell = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
-
-  def to_s
-    puts '+---+---+---+'
-    puts '| 1 | 2 | 3 |'
-    puts '+---+---+---+'
-    puts '| 4 | 5 | 6 |'
-    puts '+---+---+---+'
-    puts '| 7 | 8 | 9 |'
-    puts '+---+---+---+'
-  end
-
-  puts to_s
-  puts 'Welcome to Rubys Tic-Tac-Toe'
-  puts 'Enter player 1 name :'
-  gets.chomp
-  puts 'Enter player 2 name :'
-  gets.chomp
 
   def num_check(move)
-    
-   
     if @arr.include?(move)
       puts 'Enter a Valid number thats not already played'
       false
-    elsif
-      puts 'Enter a number between 1 and 9' 
+    elsif !(1..9).include? move
+      puts 'Enter a number between 1 and 9'
       false
-    else(1..9).include? move
-        true
-        @rr << move
+    else
+      @arr << move
+      true
+
     end
   end
 
@@ -53,14 +42,12 @@ class UserInterface
   end
 
   def one_output
-    puts to_s
-
-    puts "its #{@player_one} turn"
+    puts @board.display
+    puts " its #{@player_one} turn"
 
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
-      
 
       select1 = num_check(input)
     end
@@ -68,14 +55,13 @@ class UserInterface
   end
 
   def two_outout
-    puts to_s
+    puts @board.display
 
     puts "its #{@player_two} turn"
 
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
-      
 
       select1 = num_check(input)
     end
@@ -86,6 +72,15 @@ end
 
 result = UserInterface.new
 
+puts 'Welcome to Rubys Tic-Tac-Toe'
+puts 'Enter player 1 name :'
+result.player_one = (gets.chomp)
+result.player_one
+
+puts 'Enter player 2 name :'
+result.player_two = (gets.chomp)
+result.player_two
+puts 'lets play! Enter a number to match the position you want to play on the board'
 puts result.players
 
 puts 'Game over Player 1 wins '
