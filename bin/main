@@ -24,11 +24,17 @@ class UserInterface
   gets.chomp
 
   def num_check(move)
-    if (1..9).include? move
-      true
-    else
-      p 'Enter a Valid number'
+    
+   
+    if @arr.include?(move)
+      puts 'Enter a Valid number thats not already played'
       false
+    elsif
+      puts 'Enter a number between 1 and 9' 
+      false
+    else(1..9).include? move
+        true
+        @rr << move
     end
   end
 
@@ -54,7 +60,7 @@ class UserInterface
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
-      @arr << input if num_check(input)
+      
 
       select1 = num_check(input)
     end
@@ -69,7 +75,7 @@ class UserInterface
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
-      @arr << input if num_check(input)
+      
 
       select1 = num_check(input)
     end
