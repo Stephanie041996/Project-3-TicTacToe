@@ -1,7 +1,11 @@
 class Board
+
+  attr_accessor :board
   def initialize
-    @board = Array('1'..'9')
+    @board = Array.new(9)
+
   end
+
 
   def display
     " ---+---+---\n"\
@@ -12,4 +16,14 @@ class Board
   "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
   ' ---+---+---'\
   end
+
 end
+
+game = Board.new
+
+input = gets.chomp.to_i
+arr = []
+arr << input
+game.board[input - 1] = 'x'
+# game.board=(arr)
+puts game.display
