@@ -7,6 +7,7 @@ class UserInterface
 
   def initialize
     @board = Board.new
+    @game = Board.new
     @arr = []
     @player_one = ''
     @player_two = ''
@@ -42,30 +43,30 @@ class UserInterface
   end
 
   def one_output
-    puts @board.display
+    # puts @board.display
     puts " its #{@player_one} turn"
 
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
-
+      @game.board[input - 1] = 'x'
       select1 = num_check(input)
     end
-    print @arr
+    puts @game.display
   end
 
   def two_outout
-    puts @board.display
+    # puts @board.display
 
     puts "its #{@player_two} turn"
 
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
-
+      game.board[input - 1] = 'o'
       select1 = num_check(input)
     end
-    print @arr
+    puts @game.display
   end
 end
 
@@ -101,3 +102,13 @@ while game_on == true
     true
   end
 end
+
+# game = Board.new
+
+# # input = gets.chomp.to_i
+# arr = []
+# arr << input
+# # game.board[input - 1] = 'x'
+# # game.board=(arr)
+# puts game.display
+
