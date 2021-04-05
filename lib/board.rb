@@ -19,11 +19,11 @@ class Board
 
 end
 
-game = Board.new
+# game = Board.new
 
-input = gets.chomp.to_i
-arr = []
-arr << input
-game.board[input - 1] = 'x'
-# game.board=(arr)
-puts game.display
+# input = gets.chomp.to_i
+# arr = []
+# arr << input
+# game.board[input - 1] = 'x'
+# # game.board=(arr)
+# puts game.display
