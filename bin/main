@@ -101,7 +101,7 @@ while turn < 9
   if turn.even?
     puts result.one_output
     if result.game.win?(result.status)
-      puts 'player one wins this round'
+      puts "#{result.player_one} wins this round"
       break
     elsif result.game.tie?(result.status)
       puts "It's a Tie , no one wins"
@@ -110,7 +110,7 @@ while turn < 9
   else
     puts result.two_outout
     if result.game.win?(result.status)
-      puts 'player two wins this round'
+      puts "#{result.player_two}  wins this round"
       break
     elsif result.game.tie?(result.status)
       puts "It's a Tie , no one wins"
