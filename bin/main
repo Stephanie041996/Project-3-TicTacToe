@@ -62,6 +62,7 @@ class UserInterface
   def players
     turn = 0
     board_status = @game.board
+    puts @game.display
     while turn < 9
       if turn.even?
 
@@ -89,7 +90,6 @@ class UserInterface
   end
 end
 
-
 result = UserInterface.new
 game_on = true
 while game_on == true
@@ -98,30 +98,27 @@ while game_on == true
   puts
   result.player_one = gets.chomp
 
-  until !result.player_one.length.zero? 
-    puts "Dont leave it Blank"
+  while result.player_one.length.zero?
+    puts 'Dont leave it Blank'
     result.player_one = (gets.chomp)
-    result.player_one 
+    result.player_one
   end
 
   puts 'Enter player 2 name :'
   puts
   result.player_two = gets.chomp
 
-  until !result.player_two.length.zero? 
-    puts "Dont leave it Blank"
+  while result.player_two.length.zero?
+    puts 'Dont leave it Blank'
     result.player_two = (gets.chomp)
     result.player_two
   end
 
   puts 'lets play! Enter a number to match the position you want to play on the board'
   puts
-  puts result.display
-  puts
   puts result.players
 
   puts 'Game over '
- 
 
   puts 'play another game ? yes or no'
   response = gets.chomp.to_s
@@ -132,4 +129,3 @@ while game_on == true
     true
   end
 end
-
