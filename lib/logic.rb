@@ -1,19 +1,6 @@
 require_relative '../lib/board'
-
-
-#   def display
-#     " ---+---+---\n"\
-#   "| #{@board[0]} | #{@board[1]} | #{@board[2]} |\n"\
-#   " ---+---+---\n"\
-#   "| #{@board[3]} | #{@board[4]} | #{@board[5]} |\n"\
-#   " ---+---+---\n"\
-#   "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
-#   ' ---+---+---'\
-#   end
-
 class UserInterface
   attr_accessor :player_one, :player_two
-  
 
   def initialize
     @board = Board.new
@@ -86,13 +73,6 @@ class UserInterface
           puts "player one wins this round"
           break
         end
-        # winner = @game.win?(@game.board)
-        # if winner == true
-        #   puts "PLAYER ONE IS winner winner "
-        #   break
-        # end
-
-
 
       else
         puts two_outout
@@ -104,30 +84,9 @@ class UserInterface
       turn += 1
     end
   end
-  # def win_check 
-  # #  board = [3, 4, 5]
-  #   if WINNING_COMBOS[0] == @game.board
-  #     puts 'you win'
-  #   else  WINNING_COMBOS[1] == @game.board
-  #     puts 'i win'
-  #   end
-  
-  # end
+
 end
 
 
 
-# WINNING_COMBOS = [
-#     [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
-#     [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
-#   ].freeze
-# end
 
-# game = Board.new
-
-# input = gets.chomp.to_i
-# arr = []
-# arr << input
-# board[0, 1, 2] = 'x'
-# game.board[0, 1, 2]
-# puts game.win_check

@@ -44,10 +44,3 @@ class Board
   end
 end
 
-# phone = Board.new
-
-#  if @game.win? == true
-#   puts "win"
-#  else 
-#   break
-#  end

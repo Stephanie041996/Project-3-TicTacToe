@@ -25,7 +25,7 @@ while game_on == true
   puts 'lets play! Enter a number to match the position you want to play on the board'
   puts result.players
 
-  puts 'Game over Player 1 wins '
+  puts 'Game over '
  
 
   puts 'play another game ? yes or no'
