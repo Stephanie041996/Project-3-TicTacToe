@@ -26,6 +26,7 @@ while game_on == true
   puts result.players
 
   puts 'Game over Player 1 wins '
+ 
 
   puts 'play another game ? yes or no'
   response = gets.chomp.to_s

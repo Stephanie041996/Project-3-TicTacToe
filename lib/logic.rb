@@ -38,30 +38,23 @@ class UserInterface
     end
   end
 
-  def players
-    turn = 0
-    while turn < 9
-      if turn.even?
-        puts one_output
-
-      else
-        puts two_outout
-
-      end
-      turn += 1
-    end
-  end
+  
 
   def one_output
     # puts @board.display
     puts " its #{@player_one} turn"
 
-    select1 = false
-    while select1 == false
+      select1 = false
+      while select1 == false
       input = gets.chomp.to_i
       @game.board[input - 1] = 'x'
-      select1 = num_check(input)
-    end
+      
+      
+      select1 = num_check(input) 
+      
+    
+  end
+ 
     puts @game.display
   end
 
@@ -76,18 +69,50 @@ class UserInterface
       @game.board[input - 1] = 'o'
       select1 = num_check(input)
     end
+   
     puts @game.display
   end
-    
-  def win_check 
-  #  board = [3, 4, 5]
-    if WINNING_COMBOS[0] == @game.board
-      puts 'you win'
-    else  WINNING_COMBOS[1] == @game.board
-      puts 'i win'
-    end
+
   
+
+  def players
+    turn = 0
+    board_status = @game.board
+    while turn < 9
+      if turn.even?
+     
+        puts one_output
+        if @game.win?(board_status)
+          puts "player one wins this round"
+          break
+        end
+        # winner = @game.win?(@game.board)
+        # if winner == true
+        #   puts "PLAYER ONE IS winner winner "
+        #   break
+        # end
+
+
+
+      else
+        puts two_outout
+        if @game.win?(board_status)
+          puts "player two wins this round"
+          break
+        end
+      end
+      turn += 1
+    end
   end
+  # def win_check 
+  # #  board = [3, 4, 5]
+  #   if WINNING_COMBOS[0] == @game.board
+  #     puts 'you win'
+  #   else  WINNING_COMBOS[1] == @game.board
+  #     puts 'i win'
+  #   end
+  
+  # end
 end
 
 
