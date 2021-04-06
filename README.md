@@ -1,7 +1,7 @@
 
 # Project 3 - Tic Tac Toe
 For this project we built a tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns. 
-WE made use of different elements Object Oriented programming(OOP) within the game - Class ,Instance variable, and Method. 
+WE made use of different elements of Object Oriented programming(OOP) within the game - Class ,Instance variable, and Method. 
 
 <p align="center">
   <img width="600" src="Assets/Tic-tac-toe-game-1.svg.png">
