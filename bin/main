@@ -65,7 +65,6 @@ class UserInterface
     puts @game.display
     while turn < 9
       if turn.even?
-
         puts one_output
         if @game.win?(board_status)
           puts 'player one wins this round'
@@ -74,7 +73,6 @@ class UserInterface
           puts "It's a Tie , no one wins"
           break
         end
-
       else
         puts two_outout
         if @game.win?(board_status)
@@ -126,6 +124,6 @@ while game_on == true
   if response.include?('no')
     game_on = false
   elsif response.include?('yes')
-    true
+    game_on = true
   end
 end
