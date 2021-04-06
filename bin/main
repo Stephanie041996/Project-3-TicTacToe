@@ -6,12 +6,9 @@ class UserInterface
   attr_accessor :player_one, :player_two, :game
 
   def initialize
-    @board = Board.new
     @game = Board.new
-    @arr = []
     @player_one = ''
     @player_two = ''
-    @cell = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
 
   def num_check(move)
@@ -29,8 +26,7 @@ class UserInterface
   end
 
   def one_output
-    # puts @board.display
-    puts " its #{@player_one} turn"
+    puts " It's #{@player_one} turn"
 
     select1 = false
     while select1 == false
@@ -45,9 +41,7 @@ class UserInterface
   end
 
   def two_outout
-    # puts @board.display
-
-    puts "its #{@player_two} turn"
+    puts "It's #{@player_two} turn"
 
     select1 = false
     while select1 == false
@@ -62,38 +56,47 @@ class UserInterface
   def status
     @game.board
   end
-
-  # def players
-
-  # end
 end
 
 result = UserInterface.new
-
-puts 'Welcome to Rubys Tic-Tac-Toe'
+puts
+puts 'WELCOME TO TIC-TAC-TOE'
+puts
+puts 'We play TicTacToe on a 3x3 board.'
+puts 'Players take turns placing their Token, O or X,'
+puts 'on an open square in the grid.'
+puts
+puts 'The first player taking 3 consecutive positions in line,'
+puts 'horizontally, verticaly or diagonally will be the winner.'
+puts 'If all 9 squares are filled and neither player can position '
+puts '3 tokens in line, the game will be tie.'
+puts
+puts
 puts 'Enter player 1 name :'
 puts
 result.player_one = gets.chomp
+puts
 
 while result.player_one.length.zero?
-  puts 'Dont leave it Blank'
+  puts 'Dont leave it blank'
   result.player_one = (gets.chomp)
   result.player_one
 end
-
+puts
 puts 'Enter player 2 name :'
 puts
 result.player_two = gets.chomp
-
+puts
 while result.player_two.length.zero?
   puts 'Dont leave it Blank'
   result.player_two = (gets.chomp)
   result.player_two
 end
 
-puts 'lets play! Enter a number to match the position you want to play on the board'
+puts 'Lets play! Enter a number to match the position you want to play on the board'
+puts 'Player 1 will be x '
+puts 'Player 2 will be o'
 puts
-# puts result.players
 turn = 0
 
 puts result.game.display
@@ -101,24 +104,22 @@ while turn < 9
   if turn.even?
     puts result.one_output
     if result.game.win?(result.status)
-      puts "#{result.player_one} wins this round"
+      puts "#{result.player_one} WINS THE GAME"
       break
     elsif result.game.tie?(result.status)
-      puts "It's a Tie , no one wins"
+      puts "It's a TIE , no one wins"
       break
     end
   else
     puts result.two_outout
     if result.game.win?(result.status)
-      puts "#{result.player_two}  wins this round"
+      puts "#{result.player_two}  WINS THE GAME"
       break
     elsif result.game.tie?(result.status)
-      puts "It's a Tie , no one wins"
+      puts "It's a TIE , no one wins"
       break
     end
   end
   turn += 1
 end
-puts 'Game over '
-
-
+puts 'GAME OVER!!'

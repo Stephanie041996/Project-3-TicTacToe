@@ -3,7 +3,6 @@ class Board
 
   def initialize
     @board = (1..9).to_a
-    # @board = ['o','o','o',' ',' ',' ',' ',' ',' ']
     @win_sequence = [
       [0, 1, 2],
       [3, 4, 5],
@@ -35,8 +34,4 @@ class Board
       combination.all? { |idx| board[idx] == 'x' } || combination.all? { |idx| board[idx] == 'o' }
     end
   end
-
-  # def update_board(current_player, position, player1, player2)
-  #   @board[position - 1] = current_player == player1 ? player1.symbol : player2.symbol
-  # end
 end
