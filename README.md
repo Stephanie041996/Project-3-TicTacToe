@@ -51,7 +51,7 @@ Clone repository from github to your local drive by following these steps:
 - Press Enter to create your local clone
 
 ### Install
-- Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
+- Install Atom or Microsoft Visual Studio text editor(preferred) to view the code on your local machine.
 - Install Git.
 
 ## Running the game
