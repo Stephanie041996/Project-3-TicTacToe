@@ -1,11 +1,10 @@
-
 class Board
   attr_accessor :board, :win_sequence
 
   def initialize
-    @board = Array.new(9)
+   @board = (1..9).to_a 
     # @board = ['o','o','o',' ',' ',' ',' ',' ',' ']
-    @win_sequence =[
+    @win_sequence = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -17,7 +16,7 @@ class Board
     ]
   end
 
-    def display
+  def display
     " ---+---+---\n"\
   "| #{@board[0]} | #{@board[1]} | #{@board[2]} |\n"\
   " ---+---+---\n"\
@@ -27,20 +26,17 @@ class Board
   ' ---+---+---'\
   end
 
-  def tie?
-    @board.all? { |e| e.is_a?(String) }
+  def tie?(board)
+    board.all? { |e| e.is_a?(String) }
   end
 
   def win?(board)
     @win_sequence.any? do |combination|
       combination.all? { |idx| board[idx] == 'x' } || combination.all? { |idx| board[idx] == 'o' }
     end
-    
   end
 
-
-  def update_board(current_player, position, player1, player2)
-    @board[position - 1] = current_player == player1 ? player1.symbol : player2.symbol
-  end
+  # def update_board(current_player, position, player1, player2)
+  #   @board[position - 1] = current_player == player1 ? player1.symbol : player2.symbol
+  # end
 end
-
