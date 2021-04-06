@@ -2,7 +2,7 @@ class Board
   attr_accessor :board, :win_sequence
 
   def initialize
-   @board = (1..9).to_a 
+    @board = (1..9).to_a
     # @board = ['o','o','o',' ',' ',' ',' ',' ',' ']
     @win_sequence = [
       [0, 1, 2],
@@ -17,13 +17,13 @@ class Board
   end
 
   def display
-       " ---+---+---\n"\
-       "| #{@board[0]} | #{@board[1]} | #{@board[2]} |\n"\
-       " ---+---+---\n"\
-       "| #{@board[3]} | #{@board[4]} | #{@board[5]} |\n"\
-       " ---+---+---\n"\
-       "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
-       ' ---+---+---'\
+    " ---+---+---\n"\
+    "| #{@board[0]} | #{@board[1]} | #{@board[2]} |\n"\
+    " ---+---+---\n"\
+    "| #{@board[3]} | #{@board[4]} | #{@board[5]} |\n"\
+    " ---+---+---\n"\
+    "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
+    ' ---+---+---'\
   end
 
   def tie?(board)

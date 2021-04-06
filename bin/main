@@ -3,7 +3,7 @@
 require_relative '../lib/board'
 
 class UserInterface
-  attr_accessor :player_one, :player_two
+  attr_accessor :player_one, :player_two, :game
 
   def initialize
     @board = Board.new
@@ -59,71 +59,66 @@ class UserInterface
     puts @game.display
   end
 
-  def players
-    turn = 0
-    board_status = @game.board
-    puts @game.display
-    while turn < 9
-      if turn.even?
-        puts one_output
-        if @game.win?(board_status)
-          puts 'player one wins this round'
-          break
-        elsif @game.tie?(board_status)
-          puts "It's a Tie , no one wins"
-          break
-        end
-      else
-        puts two_outout
-        if @game.win?(board_status)
-          puts 'player two wins this round'
-          break
-        elsif @game.tie?(board_status)
-          puts "It's a Tie , no one wins"
-          break
-        end
-      end
-      turn += 1
-    end
+  def status
+    @game.board
   end
+
+  # def players
+
+  # end
 end
 
 result = UserInterface.new
-game_on = true
-while game_on == true
-  puts 'Welcome to Rubys Tic-Tac-Toe'
-  puts 'Enter player 1 name :'
-  puts
-  result.player_one = gets.chomp
 
-  while result.player_one.length.zero?
-    puts 'Dont leave it Blank'
-    result.player_one = (gets.chomp)
-    result.player_one
-  end
+puts 'Welcome to Rubys Tic-Tac-Toe'
+puts 'Enter player 1 name :'
+puts
+result.player_one = gets.chomp
 
-  puts 'Enter player 2 name :'
-  puts
-  result.player_two = gets.chomp
-
-  while result.player_two.length.zero?
-    puts 'Dont leave it Blank'
-    result.player_two = (gets.chomp)
-    result.player_two
-  end
-
-  puts 'lets play! Enter a number to match the position you want to play on the board'
-  puts
-  puts result.players
-
-  puts 'Game over '
-
-  puts 'play another game ? yes or no'
-  response = gets.chomp.to_s
-
-  if response.include?('no')
-    game_on = false
-  elsif response.include?('yes')
-    game_on = true
-  end
+while result.player_one.length.zero?
+  puts 'Dont leave it Blank'
+  result.player_one = (gets.chomp)
+  result.player_one
 end
+
+puts 'Enter player 2 name :'
+puts
+result.player_two = gets.chomp
+
+while result.player_two.length.zero?
+  puts 'Dont leave it Blank'
+  result.player_two = (gets.chomp)
+  result.player_two
+end
+
+puts 'lets play! Enter a number to match the position you want to play on the board'
+puts
+# puts result.players
+turn = 0
+
+puts result.game.display
+while turn < 9
+  if turn.even?
+    puts result.one_output
+    if result.game.win?(result.status)
+      puts 'player one wins this round'
+      break
+    elsif result.game.tie?(result.status)
+      puts "It's a Tie , no one wins"
+      break
+    end
+  else
+    puts result.two_outout
+    if result.game.win?(result.status)
+      puts 'player two wins this round'
+      break
+    elsif result.game.tie?(result.status)
+      puts "It's a Tie , no one wins"
+      break
+    end
+  end
+  turn += 1
+end
+puts 'Game over '
+
+
