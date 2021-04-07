@@ -5,7 +5,7 @@ require_relative '../lib/board'
 class UserInterface
   attr_accessor :player_one, :player_two, :game
 
-  def initialize 
+  def initialize
     @arr = []
     @game = Board.new
     @player_one = ''
