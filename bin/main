@@ -1,3 +1,103 @@
 #!/usr/bin/env ruby
 
-puts 'Hello!'
+require_relative '../lib/board'
+
+class UserInterface
+  attr_accessor :player_one, :player_two
+
+  def initialize
+    @board = Board.new
+    @arr = []
+    @player_one = ''
+    @player_two = ''
+    @cell = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  end
+
+  def num_check(move)
+    if @arr.include?(move)
+      puts 'Enter a Valid number thats not already played'
+      false
+    elsif !(1..9).include? move
+      puts 'Enter a number between 1 and 9'
+      false
+    else
+      @arr << move
+      true
+
+    end
+  end
+
+  def players
+    turn = 0
+    while turn < 9
+      if turn.even?
+        puts one_output
+
+      else
+        puts two_outout
+
+      end
+      turn += 1
+    end
+  end
+
+  def one_output
+    puts @board.display
+    puts " its #{@player_one} turn"
+
+    select1 = false
+    while select1 == false
+      input = gets.chomp.to_i
+
+      select1 = num_check(input)
+    end
+    print @arr
+  end
+
+  def two_outout
+    puts @board.display
+
+    puts "its #{@player_two} turn"
+
+    select1 = false
+    while select1 == false
+      input = gets.chomp.to_i
+
+      select1 = num_check(input)
+    end
+    print @arr
+  end
+end
+
+result = UserInterface.new
+game_on = true
+while game_on == true
+  puts 'Welcome to Rubys Tic-Tac-Toe'
+  puts 'Enter player 1 name :'
+  while result.player_one.length.zero? == true
+    result.player_one = (gets.chomp)
+    puts 'dont leave empty'
+    result.player_one
+  end
+
+  puts 'Enter player 2 name :'
+  while result.player_two.length.zero? == true
+    result.player_two = (gets.chomp)
+    puts 'dont leave empty'
+    result.player_two
+  end
+
+  puts 'lets play! Enter a number to match the position you want to play on the board'
+  puts result.players
+
+  puts 'Game over Player 1 wins '
+
+  puts 'play another game ? yes or no'
+  response = gets.chomp.to_s
+
+  if response.include?('no')
+    game_on = false
+  elsif response.include?('yes')
+    true
+  end
+end
