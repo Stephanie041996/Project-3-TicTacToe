@@ -5,7 +5,8 @@ require_relative '../lib/board'
 class UserInterface
   attr_accessor :player_one, :player_two, :game
 
-  def initialize
+  def initialize 
+    @arr = []
     @game = Board.new
     @player_one = ''
     @player_two = ''
@@ -32,7 +33,6 @@ class UserInterface
     while select1 == false
       input = gets.chomp.to_i
       @game.board[input - 1] = 'x'
-
       select1 = num_check(input)
 
     end
