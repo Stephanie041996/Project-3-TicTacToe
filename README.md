@@ -47,7 +47,7 @@ Clone repository from github to your local drive by following these steps:
 - HTTP: `https://github.com/tanzila-abedin/Project-3-TicTacToe`.
 - Open Terminal
 - Change the current working directory to the location you want the cloned directory
-- Type one of the git clone commands listed above.
+- Type  git clone and paste the HTTP link.
 - Press Enter to create your local clone
 
 ### Install
@@ -57,7 +57,9 @@ Clone repository from github to your local drive by following these steps:
 ## Running the game
 - Open your terminal
 - Navigate to project directory
-- Enter `./bin/main.rb` in your terminal and press Enter.
+- type 'git checkout game_logic' to navigate to correct branch
+- 'cd bin' to enter the bin
+- Run `ruby main.rb` in your terminal to play and press Enter.
 - Follow the instructions in the Tic Tac Toe Game Instructions section.
 - Enjoy the game
 
@@ -75,9 +77,8 @@ Clone repository from github to your local drive by following these steps:
 
 ![Stephanie's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stephanie041996&count_private=true&theme=dark&show_icons=true)
 
-- GitHub: [@githubhandle](https://github.com/tanzila-abedin)
-- Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tanzila-abedin-331440b2/)
+- GitHub: [@githubhandle](https://github.com/Stephanie041996)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephanie-sakuhuni-a81029140/)
 
 ## 📝 License
 
