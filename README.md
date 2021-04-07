@@ -1,12 +1,10 @@
 
-# Project 2 - Tic Tac Toe
+# Project 3 - Tic Tac Toe
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
+
 
 ## How Tic Tac Toe is played?
 
-
-![screenshot](./Assets/sort.gif)
 
 
 ## Built With
@@ -40,7 +38,7 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Stephanie**
 
-![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=tanzila-abedin&count_private=true&theme=dark&show_icons=true)
+![Stephanie's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stephanie041996&count_private=true&theme=dark&show_icons=true)
 
 - GitHub: [@githubhandle](https://github.com/tanzila-abedin)
 - Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
