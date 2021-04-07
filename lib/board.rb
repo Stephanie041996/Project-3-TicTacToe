@@ -1,4 +1,5 @@
 class Board
+
   attr_accessor :board, :win_sequence
 
   def initialize
@@ -13,6 +14,7 @@ class Board
       [2, 4, 6],
       [0, 4, 8]
     ]
+
   end
 
   def display
@@ -25,9 +27,11 @@ class Board
     ' ---+---+---'\
   end
 
+
   def tie?(board)
     board.all? { |e| e.is_a?(String) }
   end
+
 
   def win?(board)
     @win_sequence.any? do |combination|
