@@ -1,11 +1,9 @@
 class Board
-
   attr_accessor :board
+
   def initialize
     @board = Array.new(9)
-
   end
-
 
   def display
     " ---+---+---\n"\
@@ -16,7 +14,6 @@ class Board
   "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
   ' ---+---+---'\
   end
-
 end
 
 game = Board.new
