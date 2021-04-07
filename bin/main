@@ -6,6 +6,7 @@ class UserInterface
   attr_accessor :player_one, :player_two, :game
 
   def initialize
+    @arr = []
     @game = Board.new
     @player_one = ''
     @player_two = ''
@@ -122,4 +123,5 @@ while turn < 9
   end
   turn += 1
 end
+
 puts 'GAME OVER!!'
