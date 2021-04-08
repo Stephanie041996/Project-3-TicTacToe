@@ -2,7 +2,7 @@ class Board
   attr_accessor :board
 
   def initialize
-    @board = (1..9).to_a
+    @board = Array.new(9)
     @win_sequence = [
       [0, 1, 2],
       [3, 4, 5],
