@@ -1,30 +1,67 @@
 
 # Project 3 - Tic Tac Toe
+For this project we built a tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns. 
+WE made use of different elements of Object Oriented programming(OOP) within the game - Class ,Instance variable, and Method. 
 
-
+<p align="center">
+  <img width="600" src="Assets/Tic-tac-toe-game-1.svg.png">
+</p>
 
 ## How Tic Tac Toe is played?
+* Tic Tac Toe is board game played on a board with a 3 squared by 3 squared grid.
 
+* The players are assigned their own symbols to place on the board cells
+
+* Player 1 will be assigned the `X` symbol.
+
+* Player 2 will be assigned the `O` symbol.
+
+* Players take turn to place their symbols on the board.
+
+* The grid is numbered from 1 to 9.
+
+* You place the symbol by choosing the cell number.
+
+* The  First Player to get 3 of her symbols in a row (up, down, across, or diagonally) wins the game.
+
+* When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
 
 ## Built With
-
 - Ruby
 
-## Pre-request
-
-Ruby installed.
-
 ## Getting Started
-
 To get a local copy up and running follow these simple example steps.
 
-1. Go to https://github.com/tanzila-abedin/BubbleSort-Ruby
-2. Click on the code button and copy the HTTPS/ SSH URL.
-3. On terminal, type `git clone` command followed by pasting HTTPS/ SSH URL to clone this repository on your local machine.
-4. Run `git checkout -b your-branch-name`. Make your contributions
-5. Push your branch up to your forked repository
-6. Open a Pull Request with a detailed description of the development branch of the original project for a review
+### Prerequisites
+- Text editor
+- GitHub
+- Git
+- Ruby
+
+### Setup
+Clone repository from github to your local drive by following these steps:
+- Go to the main page of the repository
+- Above the listed files, click the green Code button
+- You can clone the repository using:
+- HTTP: `https://github.com/tanzila-abedin/Project-3-TicTacToe`.
+- Open Terminal
+- Change the current working directory to the location you want the cloned directory
+- Type  git clone and paste the HTTP link.
+- Press Enter to create your local clone
+
+### Install
+- Install Atom or Microsoft Visual Studio text editor(preferred) to view the code on your local machine.
+- Install Git.
+
+## Running the game
+- Open your terminal
+- Navigate to project directory
+- type 'git checkout game_logic' to navigate to correct branch
+- 'cd bin' to enter the bin
+- Run `ruby main.rb` in your terminal to play and press Enter.
+- Follow the instructions in the Tic Tac Toe Game Instructions section.
+- Enjoy the game
 
 ## Authors
 
@@ -40,9 +77,8 @@ To get a local copy up and running follow these simple example steps.
 
 ![Stephanie's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stephanie041996&count_private=true&theme=dark&show_icons=true)
 
-- GitHub: [@githubhandle](https://github.com/tanzila-abedin)
-- Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tanzila-abedin-331440b2/)
+- GitHub: [@githubhandle](https://github.com/Stephanie041996)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephanie-sakuhuni-a81029140/)
 
 ## 📝 License
 

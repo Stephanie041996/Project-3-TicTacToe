@@ -28,6 +28,7 @@ class UserInterface
     end
   end
 
+
   def num_check2(move)
     if @game.board.include?(move)
       puts 'Enter a Valid number thats not already played'
@@ -44,12 +45,14 @@ class UserInterface
     end
   end
 
+
   def one_output
     puts " It's #{@player_one} turn"
 
     select1 = false
     while select1 == false
       input = gets.chomp.to_i
+      @game.board[input - 1] = 'x'
 
       select1 = num_check(input)
 
@@ -65,7 +68,9 @@ class UserInterface
     while select1 == false
       input = gets.chomp.to_i
 
+
       select1 = num_check2(input)
+
     end
 
     puts @game.display
@@ -141,4 +146,6 @@ while turn < 9
   end
   turn += 1
 end
+
 puts 'GAME OVER!!!'
+

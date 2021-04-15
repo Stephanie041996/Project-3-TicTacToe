@@ -1,8 +1,10 @@
 class Board
-  attr_accessor :board
+  attr_accessor :board, :win_sequence
 
   def initialize
+
     @board = Array.new(9)
+
     @win_sequence = [
       [0, 1, 2],
       [3, 4, 5],
@@ -35,3 +37,5 @@ class Board
     end
   end
 end
+
+
