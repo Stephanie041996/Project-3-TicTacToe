@@ -3,24 +3,35 @@ class Board
 
   def initialize
     @board = Array.new(9)
+    @win_sequence = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [2, 4, 6],
+      [0, 4, 8]
+    ]
   end
 
   def display
     " ---+---+---\n"\
-  "| #{@board[0]} | #{@board[1]} | #{@board[2]} |\n"\
-  " ---+---+---\n"\
-  "| #{@board[3]} | #{@board[4]} | #{@board[5]} |\n"\
-  " ---+---+---\n"\
-  "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
-  ' ---+---+---'\
+    "| #{@board[0]} | #{@board[1]} | #{@board[2]} |\n"\
+    " ---+---+---\n"\
+    "| #{@board[3]} | #{@board[4]} | #{@board[5]} |\n"\
+    " ---+---+---\n"\
+    "| #{@board[6]} | #{@board[7]} | #{@board[8]} |\n"\
+    ' ---+---+---'\
+  end
+
+  def tie?(board)
+    board.all? { |e| e.is_a?(String) }
+  end
+
+  def win?(board)
+    @win_sequence.any? do |combination|
+      combination.all? { |idx| board[idx] == 'x' } || combination.all? { |idx| board[idx] == 'o' }
+    end
   end
 end
-
-game = Board.new
-
-input = gets.chomp.to_i
-arr = []
-arr << input
-game.board[input - 1] = 'x'
-# game.board=(arr)
-puts game.display
