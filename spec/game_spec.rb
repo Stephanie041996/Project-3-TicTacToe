@@ -66,4 +66,16 @@ describe Board do
       expect(subject.win_sequence).to be_an(Array)
     end
   end
+
+   describe 'tie?' do
+    context 'returning tie' do
+      it 'returns true if all are string' do
+        expect(board.tie?(%w[x x x x o o o o o])).to be true
+      end
+      it 'returns false if all are not string' do
+        expect(board.tie?(['x', 'x', 'x', 'x', 'o', 'o', 'o', nil, nil])).to be false
+      end
+    end
+  end
+
 end
