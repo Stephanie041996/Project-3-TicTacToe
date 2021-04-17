@@ -1,8 +1,8 @@
 class Board
+  include Enumerable
   attr_accessor :board, :win_sequence
 
   def initialize
-
     @board = Array.new(9)
 
     @win_sequence = [
@@ -37,5 +37,3 @@ class Board
     end
   end
 end
-
-
