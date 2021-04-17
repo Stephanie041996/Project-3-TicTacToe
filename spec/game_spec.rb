@@ -78,4 +78,15 @@ describe Board do
     end
   end
 
+  describe 'Win?' do
+    context 'when win combination match' do
+      it 'returns true if there are any winning combo' do
+        expect(board.win?(['x', 'x', 'x', 4, 5, 6, 7, 8, 9])).to eq true
+      end
+      it 'returns false if  there are no winning combo' do
+        expect(board.win?([1, 2, 3, 4, 5, 6, 7, 8, 9])).to eq false
+      end
+    end
+  end
+
 end
