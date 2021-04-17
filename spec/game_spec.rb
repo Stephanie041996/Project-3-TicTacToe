@@ -29,4 +29,23 @@ describe UserInterface do
 
   end
 
+  describe 'num_check2' do
+    context 'when player input is between 1-9' do
+      it 'returns true if input is between 0-9' do
+        expect(userinterface.num_check2(2)).to eq(true)
+      end
+    end
+
+    context 'when input is nil'
+    it 'returns false if player input is empty' do
+      expect(userinterface.num_check2(nil)).to eq(false)
+    end
+
+    context 'when input is > 9'
+    it 'returns false if player input is greater than 9' do
+      expect(userinterface.num_check2(11)).to eq(false)
+    end
+
+  end
+
 end
