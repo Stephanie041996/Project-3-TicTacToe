@@ -49,3 +49,21 @@ describe UserInterface do
   end
 
 end
+
+describe Board do
+  subject(:board) { described_class.new }
+
+  describe '#initialize' do
+    it 'raises arg error if arg passed ' do
+      expect { board('str') }.to raise_error(ArgumentError)
+    end
+
+    it 'returns an array with 9 empty spaces' do
+      expect(subject.board).to be_an(Array)
+    end
+
+    it 'contains a win sequence thats an array' do
+      expect(subject.win_sequence).to be_an(Array)
+    end
+  end
+end
