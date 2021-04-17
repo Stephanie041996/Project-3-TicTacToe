@@ -26,7 +26,6 @@ describe UserInterface do
     it 'returns false if player input is greater than 9' do
       expect(userinterface.num_check(11)).to eq(false)
     end
-
   end
 
   describe 'num_check2' do
@@ -45,9 +44,7 @@ describe UserInterface do
     it 'returns false if player input is greater than 9' do
       expect(userinterface.num_check2(11)).to eq(false)
     end
-
   end
-
 end
 
 describe Board do
@@ -67,7 +64,7 @@ describe Board do
     end
   end
 
-   describe 'tie?' do
+  describe 'tie?' do
     context 'returning tie' do
       it 'returns true if all are string' do
         expect(board.tie?(%w[x x x x o o o o o])).to be true
@@ -88,5 +85,4 @@ describe Board do
       end
     end
   end
-
 end

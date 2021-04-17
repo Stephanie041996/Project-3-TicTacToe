@@ -10,10 +10,10 @@ class UserInterface
 
   def num_check(move)
     if @game.board.include?(move)
-      puts 'Enter a Valid number thats not already played'
+      'Enter a Valid number thats not already played'
       false
     elsif !(1..9).include? move
-       'Enter a number between 1 and 9'
+      'Enter a number between 1 and 9'
       false
     else
       @game.board[move - 1] = 'x'
@@ -26,10 +26,10 @@ class UserInterface
 
   def num_check2(move)
     if @game.board.include?(move)
-      puts 'Enter a Valid number thats not already played'
+      'Enter a Valid number thats not already played'
       false
     elsif !(1..9).include? move
-      puts 'Enter a number between 1 and 9'
+      'Enter a number between 1 and 9'
       false
     else
       @game.board[move - 1] = 'o'
