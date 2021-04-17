@@ -1,4 +1,3 @@
-
 require_relative '../lib/game'
 
 describe UserInterface do
